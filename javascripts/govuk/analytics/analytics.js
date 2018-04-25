@@ -4,7 +4,7 @@
   var GOVUK = global.GOVUK || {}
   var EMAIL_PATTERN = /[^\s=/?&]+(?:@|%40)[^\s=/?&]+/g
   var POSTCODE_PATTERN = /[A-PR-UWYZ][A-HJ-Z]?[0-9][0-9A-HJKMNPR-Y]?(?:[\s+]|%20)*[0-9][ABD-HJLNPQ-Z]{2}/gi
-  var DATE_PATTERN = /\d{4}(-?)\d{2}(-?)\d{2}/g
+  var DATE_PATTERN = /(\d{4})(-?)\d{2}(-?)\d{2}/g
 
   // For usage and initialisation see:
   // https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/analytics.md#create-an-analytics-tracker
@@ -57,7 +57,7 @@
   Analytics.prototype.stripPIIFromString = function (string) {
     var stripped = string.replace(EMAIL_PATTERN, '[email]')
     if (this.stripDatePII === true) {
-      stripped = stripped.replace(DATE_PATTERN, '[date]')
+      stripped = stripped.replace(DATE_PATTERN, '$1-[month]-[day]')
     }
     if (this.stripPostcodePII === true) {
       stripped = stripped.replace(POSTCODE_PATTERN, '[postcode]')

@@ -185,13 +185,13 @@ describe('GOVUK.Analytics', function () {
       })
 
       analytics.trackPageview('/path/to/an/embedded/2018-01-01/postcode/?with=an&postcode=2017-01-01', '20192217', { label: '12345678', value: ['data', 'data', 'someone has added their personal9999-9999 postcode'] })
-      expect(window.ga.calls.mostRecent().args).toEqual(['send', 'pageview', { page: '/path/to/an/embedded/[date]/postcode/?with=an&postcode=[date]', title: '[date]', label: '[date]', value: ['data', 'data', 'someone has added their personal[date] postcode'] }])
+      expect(window.ga.calls.mostRecent().args).toEqual(['send', 'pageview', { page: '/path/to/an/embedded/2018-[month]-[day]/postcode/?with=an&postcode=2017-[month]-[day]', title: '2019-[month]-[day]', label: '1234-[month]-[day]', value: ['data', 'data', 'someone has added their personal9999-[month]-[day] postcode'] }])
 
       analytics.trackEvent('2017-01-01-category', '20192217-action', { label: '12345678', value: ['data', 'data', 'someone has added their personal9999-9999 postcode'] })
-      expect(window.ga.calls.mostRecent().args).toEqual(['send', { hitType: 'event', eventCategory: '[date]-category', eventAction: '[date]-action', eventLabel: '[date]' }]) // trackEvent ignores options other than label or integer values for value
+      expect(window.ga.calls.mostRecent().args).toEqual(['send', { hitType: 'event', eventCategory: '2017-[month]-[day]-category', eventAction: '2019-[month]-[day]-action', eventLabel: '1234-[month]-[day]' }]) // trackEvent ignores options other than label or integer values for value
 
       analytics.setDimension(1, '2017-01-01-value', { label: '12345678', value: ['data', 'data', 'someone has added their personal9999-9999 postcode'] })
-      expect(window.ga.calls.mostRecent().args).toEqual(['set', 'dimension1', '[date]-value']) // set dimension ignores extra options
+      expect(window.ga.calls.mostRecent().args).toEqual(['set', 'dimension1', '2017-[month]-[day]-value']) // set dimension ignores extra options
     })
 
     it('leaves postcodes embedded in arguments by default', function () {
@@ -310,9 +310,9 @@ describe('GOVUK.Analytics', function () {
         socialNetwork: 'email',
         socialAction: 'share',
         socialTarget: jasmine.any(String),
-        to: '[date]',
-        label: '[date]',
-        value: ['data', 'data', 'someone has added their personal[date] postcode']
+        to: '2017-[month]-[day]',
+        label: '2017-[month]-[day]',
+        value: ['data', 'data', 'someone has added their personal2999-[month]-[day] postcode']
       }])
     })
 
