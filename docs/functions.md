@@ -17,13 +17,13 @@ so there is no need to use a second argument.
 
 ```
 
-.govuk-title {
+.idsk-title {
   margin-top: pem(30);
 }
 
 Compiled css:
 
-.govuk-title {
+.idsk-title {
   margin-top: 1.875em;
 }
 
@@ -32,13 +32,13 @@ Compiled css:
 The first argument will also accept pixel units.
 
 ```
-.govuk-title {
+.idsk-title {
   margin-top: pem(19px);
 }
 
 Compiled css:
 
-.govuk-title {
+.idsk-title {
   margin-top: 1.1875em;
 }
 
@@ -47,16 +47,16 @@ Compiled css:
 If the context changes, use the second argument.
 
 ```
-.govuk-title {
+.idsk-title {
   font-size: 48px;
 }
 
-.govuk-title-child {
+.idsk-title-child {
   margin-top: pem(15, 48);
 }
 
 Compiled css:
 
-.govuk-title-child {
+.idsk-title-child {
   margin-top: 0.3125em;
 }
