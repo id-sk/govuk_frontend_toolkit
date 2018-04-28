@@ -1,4 +1,4 @@
-# GOV.UK frontend toolkit
+# ID-SK frontend toolkit
 
 A collection of Sass and JavaScript files for using as part of your
 application's frontend.
@@ -14,19 +14,19 @@ Ruby or Node.js.
 
 ### Ruby on Rails
 
-We recommend you use the [govuk_frontend_toolkit_gem][toolkit_gem_github] and
+We recommend you use the [idsk_frontend_toolkit_gem][toolkit_gem_github] and
 follow the [installation instructions][toolkit_gem_github_readme].
 
-[toolkit_gem_github]: https://github.com/alphagov/govuk_frontend_toolkit_gem
-[toolkit_gem_github_readme]: https://github.com/alphagov/govuk_frontend_toolkit_gem#readme
+[toolkit_gem_github]: https://github.com/id-sk/idsk_frontend_toolkit_gem
+[toolkit_gem_github_readme]: https://github.com/id-sk/idsk_frontend_toolkit_gem#readme
 
 ### Node.js
 
-[govuk_frontend_toolkit_npm][toolkit_npm_github] is an NPM package that can be
+[idsk_frontend_toolkit_npm][toolkit_npm_github] is an NPM package that can be
 [installed or included in your package.json][toolkit_npm].
 
-[toolkit_npm_github]: https://github.com/alphagov/govuk_frontend_toolkit_npm
-[toolkit_npm]: https://npmjs.org/package/govuk_frontend_toolkit
+[toolkit_npm_github]: https://github.com/id-sk/idsk_frontend_toolkit_npm
+[toolkit_npm]: https://npmjs.org/package/idsk_frontend_toolkit
 
 If you are using a build tool that depends on Libsass then you
 may need to upgrade to a more recent version to use the grid helpers. Minimal
@@ -39,21 +39,13 @@ Requirement: [NodeJS](https://nodejs.org/en/) installed. This gives you [Node Pa
 
 The easiest way to integrate it would be to create a `package.json` file in your application with `npm init` 
 
-You then install the toolkit with `npm install --save govuk_frontend_toolkit`.
-If you need javascript files, they will live in (`node_modules/govuk_frontend_toolkit/javascripts`).
-If you need stylesheets they will live in (`node_modules/govuk_frontend_toolkit/stylesheets`).
+You then install the toolkit with `npm install --save idsk_frontend_toolkit`.
+If you need javascript files, they will live in (`node_modules/idsk_frontend_toolkit/javascripts`).
+If you need stylesheets they will live in (`node_modules/idsk_frontend_toolkit/stylesheets`).
 
 With Django you can use https://github.com/jrief/django-sass-processor to compile Sass files.
 
-Note: if you need complete styles you might want to install govuk-elements-sass package that also installs toolkit
-
-### Composer
-
-[govuk_frontend_toolkit_composer][toolkit_composer_github] is an composer package that can be
-[added to your composer.json][toolkit_composer_github_usage]
-
-[toolkit_composer_github]: https://github.com/PurpleBooth/govuk_frontend_toolkit_composer
-[toolkit_composer_github_usage]: https://github.com/PurpleBooth/govuk_frontend_toolkit_composer#installing
+Note: if you need complete styles you might want to install idsk-elements-sass package that also installs toolkit
 
 ### Other projects
 
@@ -67,7 +59,7 @@ If your dependency management tool allows the use of Git repositories as depende
 
 For example, if you are using [bower](http://bower.io), you can add the toolkit to your `bower.json` like so:
 
-`"govuk_frontend_toolkit": "git://github.com/alphagov/govuk_frontend_toolkit#v4.1.1"` (assuming you want version 4.1.1)
+`"idsk_frontend_toolkit": "git://github.com/id-sk/idsk_frontend_toolkit#v4.1.1"` (assuming you want version 4.1.1)
 
 #### Using git submodules
 
@@ -77,7 +69,7 @@ You can include the toolkit as a [git submodule][git submodule].
 
 To add the submodule to your project run the following command substituting the path to a subdirectory in your project's assets directory:
 
-    $ git submodule add https://github.com/alphagov/govuk_frontend_toolkit.git ./path/to/assets/govuk_frontend_toolkit
+    $ git submodule add https://github.com/id-sk/idsk_frontend_toolkit.git ./path/to/assets/idsk_frontend_toolkit
 
 We recommend you use `https` rather than `ssh` for submodules as they don't require key exchanges when deploying to remote servers.
 
@@ -103,8 +95,8 @@ npm test
 ```
 
 ### Standard JavaScript
-`govuk_frontend_toolkit` uses [standardjs](http://standardjs.com/), an opinionated JavaScript linter.
-All JavaScript files follow its conventions. [Read more](https://github.com/alphagov/govuk_prototype_kit/blob/master/docs/linting.md)
+`idsk_frontend_toolkit` uses [standardjs](http://standardjs.com/), an opinionated JavaScript linter.
+All JavaScript files follow its conventions. [Read more](https://github.com/id-sk/idsk_prototype_kit/blob/master/docs/linting.md)
 
 ### Using the local test runner
 
@@ -129,11 +121,11 @@ If you are compiling Sass from the [command-line tool](http://sass-lang.com/docs
 
 In development:
 
-    sass --style expanded --line-numbers --load-path [path to]/govuk_frontend_toolkit/stylesheets input.scss output.css
+    sass --style expanded --line-numbers --load-path [path to]/idsk_frontend_toolkit/stylesheets input.scss output.css
 
 In production:
 
-    sass --style compressed --load-path [path to]/govuk_frontend_toolkit/stylesheets input.scss output.css
+    sass --style compressed --load-path [path to]/idsk_frontend_toolkit/stylesheets input.scss output.css
 
 ## Documentation
 
