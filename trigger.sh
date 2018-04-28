@@ -13,7 +13,7 @@ curl -s -X POST \
   -H "Travis-API-Version: 3" \
   -H "Authorization: token $TRAVIS_TOKEN" \
   -d "$PAYLOAD" \
-  https://api.travis-ci.org/repo/alphagov%2Fgovuk_frontend_toolkit_gem/requests
+  https://api.travis-ci.org/repo/id-sk%2Fidsk_frontend_toolkit_gem/requests
 
 curl -s -X POST \
   -H "Content-Type: application/json" \
@@ -21,4 +21,4 @@ curl -s -X POST \
   -H "Travis-API-Version: 3" \
   -H "Authorization: token $TRAVIS_TOKEN" \
   -d "$PAYLOAD" \
-  https://api.travis-ci.org/repo/alphagov%2Fgovuk_frontend_toolkit_npm/requests
+  https://api.travis-ci.org/repo/id-sk%2Fidsk_frontend_toolkit_npm/requests
