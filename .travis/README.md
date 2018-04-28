@@ -18,6 +18,6 @@ is the only way we can find that Travis can trigger another job.
 In this case, the downstream jobs publish the frontend toolkit to npm
 and RubyGems.
 
-The [Travis settings](https://travis-ci.org/alphagov/govuk_frontend_toolkit/settings)
+The [Travis settings](https://travis-ci.org/id-sk/idsk_frontend_toolkit/settings)
 contains a Travis token that belongs to
-[@govuk-design-system-ci](https://github.com/govuk-design-system-ci).
+[@id-sk-ci](https://github.com/id-sk-ci).
