@@ -304,9 +304,9 @@ A collection of font-mixins. There are two different types of font mixins.
 
 #### Changing font
 
-Typography mixins use a “New Transport” font stack by default.
+Typography mixins use an “Arial” font stack by default.
 
-If you are using the toolkit on projects that aren’t GOVUK branded you can
+If you are using the toolkit on projects that aren’t ID-SK branded you can
 override the font using two variables: `$toolkit-font-stack` and
 `$toolkit-font-stack-tabular`. These must be declared before they are used, eg by
 the core typography mixins.
@@ -316,10 +316,10 @@ the core typography mixins.
 The following heading and copy styles exist:
 
 * `heading-80`
-* `heading-48`
-* `heading-36`
-* `heading-27`
-* `heading-24`
+* `heading-52`
+* `heading-38`
+* `heading-26`
+* `heading-20`
 * `copy-19`
 * `copy-16`
 * `copy-14`
@@ -327,7 +327,7 @@ The following heading and copy styles exist:
 ##### Usage
 
     h2 {
-      @include heading-27;
+      @include heading-26;
     }
 
 #### Core styles
@@ -335,10 +335,10 @@ The following heading and copy styles exist:
 The following core styles exist:
 
 * `core-80`
-* `core-48`
-* `core-36`
-* `core-27`
-* `core-24`
+* `core-52`
+* `core-38`
+* `core-26`
+* `core-20`
 * `core-19`
 * `core-16`
 * `core-14`
@@ -355,10 +355,10 @@ recomended to pass a fraction in for readability.
 ##### Usage
 
     h1 {
-      @include core-48;
+      @include core-52;
     }
     h2 {
-      @include core-24($line-height: (50/24), $line-height-640: (18/16));
+      @include core-20($line-height: (50/24), $line-height-640: (18/16));
     }
 
 #### Tabular numbers
@@ -370,10 +370,10 @@ Tabular numbers have numerals of a standard fixed width. As all numbers have the
 ##### Usage
 
     h1 {
-      @include core-48;
+      @include core-52;
     }
     h2 {
-      @include core-24($tabular-numbers: true);
+      @include core-20($tabular-numbers: true);
     }
 
 [See an example of tabular numbers in a table](http://govuk-elements.herokuapp.com/data/#data-table-numeric)
