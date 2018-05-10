@@ -15,19 +15,18 @@
     @warn 'Passing a phase to the alpha/beta banners is deprecated';
   }
 
-  padding: 10px 0 8px;
+  padding: 10px $gutter;
+  background: $grey-3;
 
   @include media(tablet) {
     padding-bottom: 10px;
   }
 
-  border-bottom: 1px solid $border-colour;
-
   p {
     display: table;
     margin: 0;
     color: $banner-text-colour;
-    @include core-16;
+    @include core-14;
   }
 
   .phase-tag {
