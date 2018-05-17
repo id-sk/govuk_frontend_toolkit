@@ -541,11 +541,11 @@ A mixin to create a GOV.UK Phase banner, with alpha/beta tag inside.
     .phase-banner  {
       @include phase-banner();
     }
-
+    
     <div class="phase-banner">
       <p>
-        <strong class="phase-tag">ALPHA</strong>
-        <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+        <strong class="phase-tag">TESTOVACIA VERZIA</strong>
+        <span>Toto je testovacia verzia služby. Odoslané údaje nebudú zaznamenané. <a href="#">Váš názor</a> nám pomôže službu zlepšiť.</span>
       </p>
     </div>
 
@@ -557,8 +557,8 @@ A mixin to create a GOV.UK Phase banner, with alpha/beta tag inside.
 
     <div class="phase-banner">
       <p>
-        <strong class="phase-tag">BETA</strong>
-        <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+        <strong class="phase-tag">NOVÁ VERZIA</strong>
+        <span>Toto je nová verzia elektronickej služby. <a href="#">Váš názor</a> nám pomôže službu zlepšiť. <a href="#">Prepnúť na starú verziu</a>.</span>
       </p>
     </div>
 
